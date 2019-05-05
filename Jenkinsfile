@@ -1,6 +1,8 @@
 pipeline{
-stage('build'){
-echo "building"
-sh 'mvn clean package'
-}
+  stages{
+        stage('build'){
+        echo "building"
+        sh 'mvn clean package'
+        }
+  }
 }
