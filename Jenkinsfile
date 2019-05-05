@@ -1,5 +1,5 @@
 pipeline{
-  agent node
+  agent java
   stages{
    
               stage('build'){
