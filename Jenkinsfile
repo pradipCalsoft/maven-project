@@ -1,5 +1,5 @@
 pipeline{
-  agent maven,java,docker,ansible
+  agent label
   stages{
    
               stage('build'){
