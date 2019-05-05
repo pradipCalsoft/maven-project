@@ -1,5 +1,5 @@
 pipeline{
-  agent {label 'maven'}
+  agent {label 'maven,docker,ansible'}
   stages{
    
               stage('build'){
