@@ -1,7 +1,7 @@
 pipeline{
   agent any
   stages{
-    node{
+   
               stage('build'){
                 steps{
                     withMaven(maven:localMaven){
@@ -9,6 +9,6 @@ pipeline{
                     }
                   }
                 }
-        }
+        
     }
 }
