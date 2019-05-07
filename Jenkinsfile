@@ -9,6 +9,9 @@ pipeline{
                     }
                   }
                 }
+    stage (‘Deploy’) {
+                  sh ‘ssh user@tomcat rm -rf /var/www/temp_deploy/dist/’
+    }
         
     }
 }
