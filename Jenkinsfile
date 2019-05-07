@@ -10,7 +10,9 @@ pipeline{
                   }
                 }
     stage (‘Deploy’) {
-                  sh ‘ssh user@tomcat rm -rf /var/www/temp_deploy/dist/’
+                  sshagent(['14b465bc-ba00-4474-b831-c0e9d4bf2055']){
+                      sh 'scp tlt/target/tlt.war 35.177.18.220:/LOCATION/TOMCAT/webapps'
+                      }
     }
         
     }
