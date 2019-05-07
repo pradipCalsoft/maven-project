@@ -10,10 +10,12 @@ pipeline{
                   }
                 }
     stage (‘Deploy’) {
-                  sshagent(['14b465bc-ba00-4474-b831-c0e9d4bf2055']){
+      steps{
+        sshagent(['14b465bc-ba00-4474-b831-c0e9d4bf2055']){
                       sh 'scp tlt/target/tlt.war 35.177.18.220:/LOCATION/TOMCAT/webapps'
                       }
-    }
+            }
+      }
         
     }
 }
