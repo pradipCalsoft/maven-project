@@ -11,7 +11,7 @@ pipeline{
                 }
     stage ('Deploy') {
       steps{
-        sshagent(['14b465bc-ba00-4474-b831-c0e9d4bf2055']){
+        sshagent(['8fb2cb27-8756-434d-9d5e-dac83aafce3a']){
                       sh 'scp tlt/target/tlt.war 35.176.184.61:/webapps2'
                       }
             }
