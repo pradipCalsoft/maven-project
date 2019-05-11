@@ -2,9 +2,8 @@ pipeline{
 agent any
 stages{
 	stage('SCM checkout'){
-		git 'https://github.com/pradipCalsoft/maven-project'
+		git 'https://github.com/pradipCalsoft/maven-project.git'
 	}
-}
 	stage('maven test'){
 			steps{
 				withMaven(maven: 'MyLocalMaven'){
@@ -29,4 +28,4 @@ stages{
 	
 	}
 
-
+}
