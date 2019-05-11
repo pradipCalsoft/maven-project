@@ -4,6 +4,7 @@ stages{
 	stage('SCM checkout'){
 		git 'https://github.com/pradipCalsoft/maven-project'
 	}
+}
 	stage('maven test'){
 			steps{
 				withMaven(maven: 'MyLocalMaven'){
