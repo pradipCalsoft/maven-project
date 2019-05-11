@@ -2,7 +2,7 @@ pipeline{
 agent any
 stages{
 	stage('SCM checkout'){
-		git 'https://github.com/pradipCalsoft/maven-project.git'
+		git 'https://github.com/pradipCalsoft/maven-project'
 	}
 	stage('maven test'){
 			steps{
