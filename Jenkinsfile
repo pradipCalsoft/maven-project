@@ -12,7 +12,7 @@ pipeline{
     stage ('Deploy') {
       steps{
         sshagent(credentials :['14b465bc-ba00-4474-b831-c0e9d4bf2055']){
-                      sh 'scp webapp-1.0-SNAPSHOT.war 3.8.124.12'
+                      sh 'scp *.war 3.8.124.12'
                       }
             }
       }
