@@ -11,8 +11,8 @@ pipeline{
                 }
     stage ('Deploy') {
       steps{
-        sshagent(credentials :['8fb2cb27-8756-434d-9d5e-dac83aafce3a']){
-                      sh 'scp webapp-1.0-SNAPSHOT.war.war 35.176.184.61'
+        sshagent(credentials :['14b465bc-ba00-4474-b831-c0e9d4bf2055']){
+                      sh 'scp webapp-1.0-SNAPSHOT.war.war 3.8.124.12'
                       }
             }
       }
