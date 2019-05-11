@@ -2,7 +2,7 @@ pipeline{
 agent any
 stages{
 	stage('SCM checkout'){
-		git 'giturl'
+		git 'https://github.com/mg2412/maven-project.git'
 	}
 	stage('maven test'){
 			steps{
