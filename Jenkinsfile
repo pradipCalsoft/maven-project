@@ -2,7 +2,7 @@ Pipeline{
 		any agent{
 				Stages{ 
 							stage('SCM Checkout'){
-							git 'Github URL' }
+							git 'https://github.com/pradipCalsoft/maven-project.git' }
 							
 							Stage ('Compile Source code'){
 							steps{ 
