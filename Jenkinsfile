@@ -6,21 +6,21 @@ stages{
 	}
 	stage('maven test'){
 			steps{
-				withMaven(maven: 'localMaven'){
+				withMaven(maven: 'MyLocalMaven'){
 				sh 'mvn test'
 				}
 			}
 		}
 	stage('maven package'){
 			steps{
-				withMaven(maven: 'localMaven'){
+				withMaven(maven: 'MyLocalMaven'){
 				sh 'mvn package'
 				}
 		}
 	}
 	stage('maven install'){
 			steps{
-				withMaven(maven: 'localMaven'){
+				withMaven(maven: 'MyLocalMaven'){
 				sh 'mvn install'
 				}
 			}
