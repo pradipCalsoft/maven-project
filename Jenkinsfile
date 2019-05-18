@@ -40,7 +40,7 @@ stage ('Sonar Stage') {
             steps {
                 withSonarQubeEnv('sonar') {
                 withMaven(maven : 'MyLocalMaven') {
-                sh 'clean package sonar:sonar'
+                sh 'mvn clean package sonar:sonar'
                   }
               }
          }        
