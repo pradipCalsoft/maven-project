@@ -35,5 +35,16 @@ stage ('install Stage') {
             }
         }
 
-    }
+stage ('Sonar Stage') {
+
+            steps {
+                withSonarQubeEnv('sonar') {
+                withMaven(maven : 'MyLocalMaven') {
+                sh 'clean install sonar:sonar'
+                  }
+              }
+         }        
+     } 
+  
+}
 }
